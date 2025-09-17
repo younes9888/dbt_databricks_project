@@ -1,0 +1,11 @@
+dbt_databricks_project:
+  outputs:
+    dev:
+      catalog: dbt_databricks_catalog
+      host: dbc-67bac611-77b0.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/e3f8a5a9c9b6ab45
+      schema: source
+      threads: 1
+      token: "\x16dapi6d823ece8af8df8215283de935f0821edapi6d823ece8af8df8215283de935f0821edapi6d823ece8af8df8215283de935f0821edapi6d823ece8af8df8215283de935f0821e"
+      type: databricks
+  target: dev

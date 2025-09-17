@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: source
+    database: dbt_databricks_catalog
+    schema: source
+    tables:
+      - name: superstore_dataset
+        description: "Table content raw data"

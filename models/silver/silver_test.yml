@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: superstore_cleaned
+    description: "Cleaned and standardized orders table"
+    columns:
+      - name: row_id
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: ship_mode
+        tests:
+          - accepted_values:
+              values: ['First Class', 'Second Class', 'Standard Class', 'Same Day']
+              config:
+                severity: warn
+      - name: segment
+        tests:
+          - accepted_values: 
+              values: ['Corporate', 'Home Office', 'Consumer']
+              config:
+                severity: warn
+                
